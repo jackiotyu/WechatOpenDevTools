@@ -15,7 +15,7 @@ async function main() {
                         [+] node main.js -all   开启内置浏览器F12与小程序F12
 
     `;
-    const parser = new argparse.ArgumentParser({ description: HELPALL });
+    const parser = new argparse.ArgumentParser({ description: '请选择要执行的方法' });
     parser.add_argument('-x', { action: 'storeTrue', help: '开启小程序F12' });
     parser.add_argument('-c', { action: 'storeTrue', help: '开启内置浏览器F12' });
     parser.add_argument('-all', { action: 'storeTrue', help: '开启内置浏览器F12与小程序F12' });

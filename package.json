@@ -2,9 +2,9 @@
   "name": "wechatopendevtools",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/index",
+  "main": "./dist/main",
   "scripts": {
-    "dev": "ts-node ./src/index",
+    "dev": "node ./dist/main",
     "start": "webpack --config webpack.config.js --mode=production --watch",
     "build": "webpack --config webpack.config.js --mode=production"
   },

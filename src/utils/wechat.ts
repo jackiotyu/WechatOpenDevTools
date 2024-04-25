@@ -28,7 +28,7 @@ export class WechatUtils {
 
     isWechatExProcess(cmdline: string) {
         const processName = 'WeChatAppEx';
-        return cmdline.includes(processName) && cmdline.includes('--type=');
+        return cmdline.includes(processName) || cmdline.includes('--wmpf_extra_config');
     }
 
     async findInstallationPath(programName: string) {
