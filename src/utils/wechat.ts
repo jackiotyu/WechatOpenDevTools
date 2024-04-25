@@ -63,9 +63,9 @@ export class WechatUtils {
         }
     }
 
-    extractVersionNumber(cmdline) {
-        const str = cmdline.join(' ');
-        const versionMatch = str.match(/"version":(\d+)/);
+    extractVersionNumber(cmdline: string) {
+        const str = cmdline;
+        const versionMatch = str.match(/\\"version\\":(\d+)/);
         return versionMatch ? parseInt(versionMatch[1]) : null;
     }
 
