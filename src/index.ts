@@ -16,10 +16,10 @@ async function main() {
 
     `;
     const parser = new argparse.ArgumentParser({ description: HELPALL });
-    parser.addArgument('-x', { action: 'storeTrue', help: '开启小程序F12' });
-    parser.addArgument('-c', { action: 'storeTrue', help: '开启内置浏览器F12' });
-    parser.addArgument('-all', { action: 'storeTrue', help: '开启内置浏览器F12与小程序F12' });
-    const args = parser.parseArgs();
+    parser.add_argument('-x', { action: 'storeTrue', help: '开启小程序F12' });
+    parser.add_argument('-c', { action: 'storeTrue', help: '开启内置浏览器F12' });
+    parser.add_argument('-all', { action: 'storeTrue', help: '开启内置浏览器F12与小程序F12' });
+    const args = parser.parse_args();
 
     const commons = new Commons();
 
