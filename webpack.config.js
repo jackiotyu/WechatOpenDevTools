@@ -30,7 +30,7 @@ module.exports = (env, argv) => ({
     extensions: ['.tsx', '.ts', '.js']
   },
   output: {
-    filename: 'index.js',
+    filename: 'main.js',
     path: path.resolve(__dirname, 'dist')
   },
   target: 'node',

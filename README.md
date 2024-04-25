@@ -9,5 +9,5 @@
 ```
 ```sh
 yarn install
-yarn run build && node ./dist/index.js -all
+yarn run build && node ./dist/main.js -all
 ```
