@@ -1,31 +1,31 @@
 function readStdString(s) {
-    var flag = s.add(23).readU8()
+    var flag = s.add(23).readU8();
     if (flag == 0x80) {
         // 从堆中读取
-        var size = s.add(8).readUInt()
-        return s.readPointer().readUtf8String(size)
+        var size = s.add(8).readUInt();
+        return s.readPointer().readUtf8String(size);
     } else {
         // 从栈中读取
-        return s.readUtf8String(flag)
+        return s.readUtf8String(flag);
     }
 }
 function writeStdString(s, content) {
-    var flag = s.add(23).readU8()
+    var flag = s.add(23).readU8();
     if (flag == 0x80) {
         // 从堆中写入
-        var orisize = s.add(8).readUInt()
+        var orisize = s.add(8).readUInt();
         if (content.length > orisize) {
-            throw "must below orisize!"
+            throw "must below orisize!";
         }
-        s.readPointer().writeUtf8String(content)
-        s.add(8).writeUInt(content.length)
+        s.readPointer().writeUtf8String(content);
+        s.add(8).writeUInt(content.length);
     } else {
         // 从栈中写入
         if (content.length > 22) {
-            throw "max 23 for stack str"
+            throw "max 23 for stack str";
         }
-        s.writeUtf8String(content)
-        s.add(23).writeU8(content.length)
+        s.writeUtf8String(content);
+        s.add(23).writeU8(content.length);
     }
 }
 
@@ -49,12 +49,12 @@ Interceptor.attach(cpsPtr, {
     },
     onLeave: function (retval) {
         // send("[+] 可执行路径："+this.exepath.readUtf16String())
-       
+
         // 打印可执行路径
         // send("[+] 可执行路径："+this.exepath.readUtf16String())
-        
+
         // // 打印命令行参数
-        send("[+] 命令行参数："+this.cmdline.readUtf16String());
+        send(`[+] 命令行参数：${this.cmdline.readUtf16String()}`);
         //--xweb-enable-inspect
         // 打印进程id
     //    send("[+] 进程id: "+this.cmdline.readUtf16String());

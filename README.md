@@ -8,6 +8,8 @@
 -all   开启内置浏览器F12与小程序F12
 ```
 ```sh
+# node 版本 v16.20.2
 yarn install
-yarn run build && node ./dist/main.js -all
+yarn run build
+yarn dev -c
 ```
