@@ -39,17 +39,18 @@
     ],
     "outputPath": "dist",
     "assets": [
-      "node_modules/regedit/**",
-      "node_modules/regedit/vbs/**",
-      "node_modules/frida/**",
-      "node_modules/systeminformation/**",
-      "node_modules/argparse/**",
+      "node_modules/regedit/vbs/**/*.vbs",
+      "node_modules/regedit/vbs/**/*.wsf",
+      "node_modules/regedit/winerrors/*.txt",
+      "node_modules/frida/**/*.{node,dll,so,json}",
       "configs/**",
       "scripts/**"
     ],
     "scripts": [
-      "node_modules/regedit/**",
-      "node_modules/systeminformation/**"
+      "dist/**/*.js",
+      "node_modules/regedit/lib/**/*.js",
+      "node_modules/systeminformation/lib/**/*.js",
+      "node_modules/argparse/**/*.js"
     ]
   }
 }
