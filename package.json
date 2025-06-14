@@ -45,6 +45,17 @@
     "targets": [
       "node16-win-x64"
     ],
-    "outputPath": "dist"
+    "outputPath": "dist",
+    "assets": [
+      "node_modules/regedit/**",
+      "node_modules/regedit/vbs/**",
+      "node_modules/frida/**",
+      "node_modules/systeminformation/**",
+      "node_modules/argparse/**"
+    ],
+    "scripts": [
+      "node_modules/regedit/**",
+      "node_modules/systeminformation/**"
+    ]
   }
 }
