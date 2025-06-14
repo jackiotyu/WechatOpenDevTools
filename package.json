@@ -51,7 +51,9 @@
       "node_modules/regedit/vbs/**",
       "node_modules/frida/**",
       "node_modules/systeminformation/**",
-      "node_modules/argparse/**"
+      "node_modules/argparse/**",
+      "configs/**",
+      "scripts/**"
     ],
     "scripts": [
       "node_modules/regedit/**",
