@@ -15,7 +15,7 @@
 ```
 ```sh
 # node 版本 v16.20.2
-pnpm install
-pnpm run build
-pnpm dev -c
+yarn install
+yarn run build
+yarn dev -c
 ```
