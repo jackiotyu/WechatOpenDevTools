@@ -56,4 +56,4 @@ jobs:
         with:
           files: dist/WechatOpenDevTools.exe
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
