@@ -25,7 +25,7 @@ jobs:
         run: yarn build
 
       - name: Install pkg globally
-        run: yarn add -g pkg
+        run: npm install -g pkg
 
       - name: Build exe with pkg
         run: |
