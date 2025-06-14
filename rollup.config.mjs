@@ -2,6 +2,7 @@ import typescript from 'rollup-plugin-typescript2';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import del from 'rollup-plugin-delete';
+import copy from 'rollup-plugin-copy';
 
 export default {
   input: 'src/index.ts', // 入口文件
@@ -18,5 +19,13 @@ export default {
     commonjs(), // 处理 CommonJS 模块
     typescript(), // TypeScript 编译插件
     del({ targets: 'dist/*' }),
+    copy({
+      targets: [
+        {
+          src: 'node_modules/regedit/vbs/**/*',
+          dest: 'dist/vbs',
+        },
+      ],
+    }),
   ],
 };

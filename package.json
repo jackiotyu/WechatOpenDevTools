@@ -22,6 +22,7 @@
     "@typescript-eslint/parser": "^5.59.1",
     "eslint": "^8.39.0",
     "rollup": "3",
+    "rollup-plugin-copy": "^3.5.0",
     "rollup-plugin-delete": "^2.1.0",
     "rollup-plugin-typescript2": "^0.36.0",
     "tslib": "^2.8.1",
@@ -39,12 +40,11 @@
     ],
     "outputPath": "dist",
     "assets": [
-      "node_modules/regedit/vbs/**/*.vbs",
-      "node_modules/regedit/vbs/**/*.wsf",
       "node_modules/regedit/winerrors/*.txt",
       "node_modules/frida/**/*.{node,dll,so,json}",
       "configs/**",
-      "scripts/**"
+      "scripts/**",
+      "dist/vbs/**"
     ],
     "scripts": [
       "dist/**/*.js",

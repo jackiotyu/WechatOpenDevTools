@@ -5,6 +5,8 @@ import path from 'path';
 import sysInfo from 'systeminformation';
 import regedit from 'regedit';
 
+regedit.setExternalVBSLocation("./vbs");
+
 export class WechatUtils {
     configsPath: string;
     versionList: number[];
